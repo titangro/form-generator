@@ -12,6 +12,6 @@
     "moduleResolution": "node"
   },
   "files": ["src/index.tsx"],
-  "include": ["src/**/*"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
