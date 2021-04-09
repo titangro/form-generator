@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "module": "es6",
@@ -8,8 +9,9 @@
     "outDir": "build",
     "rootDir": "src",
     "baseUrl": "src",
+    "moduleResolution": "node"
   },
-  "files": ["src/index.ts"],
+  "files": ["src/index.tsx"],
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
