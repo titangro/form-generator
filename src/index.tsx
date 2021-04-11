@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 
-const rootNode = document.getElementById('root');
+import '~/assets/scss/styles/index.scss';
 
-console.log('ROOT --> ', rootNode);
-
-ReactDOM.render(<App />, rootNode);
+ReactDOM.render(<App />, document.getElementById('root'));

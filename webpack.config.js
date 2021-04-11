@@ -5,14 +5,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = (env) => {
   const { PORT } = env;
 
+  const source = path.resolve(__dirname, 'src');
+
   return {
     mode: 'development',
-    entry: path.resolve(__dirname, 'src'),
+    entry: source,
     output: {
       path: path.resolve(__dirname, 'build'),
     },
+    context: source,
     devServer: {
-      contentBase: path.resolve(__dirname, 'src'),
+      contentBase: source,
       open: true,
       host: 'localhost',
       port: PORT || 3005,
@@ -38,7 +41,24 @@ module.exports = (env) => {
         },
         {
           test: /\.s[ac]ss$/i,
-          use: ['style-loader', 'css-loader', 'sass-loader'],
+          use: [
+            'style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  exportLocalsConvention: 'camelCase',
+                },
+              },
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                additionalData:
+                  '@import "./src/assets/scss/variables/index.scss";',
+              },
+            },
+          ],
         },
         {
           test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/,
@@ -54,6 +74,9 @@ module.exports = (env) => {
       ],
     },
     resolve: {
+      alias: {
+        '~': path.resolve('./src'),
+      },
       extensions: ['.tsx', '.ts', '.js', '.html', '.css', '.scss'],
     },
   };

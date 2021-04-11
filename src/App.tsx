@@ -1,7 +1,6 @@
 import React from 'react';
-
-import styles from './App.module.scss';
+import { LayoutsMain } from '~/layouts/main/LayoutsMain';
 
 export const App: React.FC = () => {
-  return <div className={styles.app}>test</div>;
+  return <LayoutsMain>test</LayoutsMain>; // !TOOD: add layouting
 };
