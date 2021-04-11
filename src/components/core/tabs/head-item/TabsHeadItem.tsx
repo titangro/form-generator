@@ -1,20 +1,21 @@
 import React from 'react';
 import { TabsHeadItemProps } from './typings';
-import classNamesBind from 'classnames/bind';
 
 import styles from './TabsHeadItem.module.scss';
 import { UiButton } from '~/components/ui/button/UiButton';
 
-const cx = classNamesBind.bind(styles);
-
 export const TabsHeadItem: React.FC<TabsHeadItemProps> = (props) => {
-  const { name, isActive } = props;
+  const { name, isActive, handleActiveName } = props;
+
+  const handleClick = () => {
+    handleActiveName(name);
+  };
 
   return (
     <UiButton
-      className={cx('tabs-head-item', {
-        tabsHeadItemActive: isActive,
-      })}
+      className={styles.tabsHeadItem}
+      isActive={isActive}
+      onClick={handleClick}
     >
       {name}
     </UiButton>

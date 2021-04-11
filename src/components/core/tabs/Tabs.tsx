@@ -18,6 +18,7 @@ export const Tabs: React.FC<TabsProps> = (props) => {
       <div className={styles.tabs__head}>
         {names.map((tabName) => (
           <TabsHeadItem
+            key={tabName}
             name={tabName}
             isActive={tabName === activeName}
             handleActiveName={handleActiveName}

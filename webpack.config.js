@@ -47,6 +47,9 @@ module.exports = (env) => {
               loader: 'css-loader',
               options: {
                 modules: {
+                  localIdentName: '[path]-[local]',
+                  auto: true,
+                  mode: 'local',
                   exportLocalsConvention: 'camelCase',
                 },
               },

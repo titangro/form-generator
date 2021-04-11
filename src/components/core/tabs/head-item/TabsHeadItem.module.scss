@@ -1,3 +1,9 @@
 .tabs-head-item {
-  display: flex;
+  border: $base 1px solid;
+  border-right: none;
+  border-radius: 20px 20px 0 0;
+
+  &:last-child {
+    border-right: $base 1px solid;
+  }
 }
