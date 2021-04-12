@@ -50,7 +50,7 @@ module.exports = (env) => {
                   localIdentName: '[path]-[local]',
                   auto: true,
                   mode: 'local',
-                  exportLocalsConvention: 'camelCase',
+                  exportLocalsConvention: 'dashes',
                 },
               },
             },

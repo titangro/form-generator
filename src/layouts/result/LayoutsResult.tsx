@@ -42,10 +42,18 @@ export const LayoutsResult: React.FC<LayoutsResultProps> = ({
 
       <LayoutsButtons>
         {/* buttons */}
-        <UiButton type="button" onClick={handleSubmit}>
+        <UiButton
+          type="button"
+          onClick={handleSubmit}
+          className={styles.layoutsResult__button}
+        >
           Cancel
         </UiButton>
-        <UiButton type="button" onClick={handleSubmit}>
+        <UiButton
+          type="button"
+          onClick={handleSubmit}
+          className={styles.layoutsResult__button}
+        >
           Save
         </UiButton>
         {/* end buttons */}

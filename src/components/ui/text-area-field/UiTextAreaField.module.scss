@@ -1,3 +1,6 @@
 .ui-text-area-field {
-  display: flex;
+  width: 100%;
+  border: $base 1px solid;
+  resize: none;
+  padding: 8px;
 }

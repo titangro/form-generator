@@ -13,6 +13,7 @@ export const UiTextAreaField: React.FC<UiTextAreaFieldProps> = ({
     <textarea
       name={name}
       className={classNames(styles.uiTextAreaField, className)}
+      rows={5}
       {...otherProps}
     />
   );

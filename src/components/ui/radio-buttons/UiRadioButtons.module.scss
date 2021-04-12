@@ -1,7 +1,14 @@
 .ui-radio-buttons {
   display: flex;
+  flex-direction: column;
 
-  // &__label
-  // &__input
+  &__label {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    margin-right: 8px;
+  }
   // &__title
 }

@@ -1,7 +1,22 @@
 .layouts-field-row {
   display: flex;
+  margin-right: 20%;
+  margin-bottom: 16px;
 
-  // &__label-wrap {}
-  // &__label {}
-  // &__field-wrap {}
+  &__label-wrap {
+    min-width: 120px;
+    width: 120px;
+    max-width: 120px;
+    display: flex;
+    align-items: center;
+  }
+  &__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__field-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
