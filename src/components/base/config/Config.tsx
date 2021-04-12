@@ -1,22 +1,12 @@
 import React from 'react';
 import { UiButton } from '~/components/ui/button/UiButton';
+import { LayoutsConfig } from '~/layouts/config/LayoutsConfig';
 
 export const Config = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log('SUBMITED');
+    console.log('SUBMITED CONFIG');
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <textarea name="" id="" cols={30} rows={10}>
-        JSON
-      </textarea>{' '}
-      // !TODO: add textarea ui
-      <UiButton type="submit" onSubmit={handleSubmit}>
-        Apply
-      </UiButton>{' '}
-      // !TODO: add buttons layout
-    </form>
-  );
+  return <LayoutsConfig handleSubmit={handleSubmit} />;
 };
