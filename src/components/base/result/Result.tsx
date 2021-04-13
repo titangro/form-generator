@@ -1,11 +1,22 @@
 import React from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 import { LayoutsResult } from '~/layouts/result/LayoutsResult';
 
+type ResultFormData = Record<string, unknown>;
+
 export const Result = () => {
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log('CLICK RESULT');
+  const formMethods = useForm();
+  
+  const { handleSubmit } = formMethods;
+
+
+  const onSubmit = (data: ResultFormData) => {
+    console.log('CLICK RESULT', data);
   };
 
-  return <LayoutsResult handleSubmit={handleSubmit} />;
+  return (
+    <FormProvider {...formMethods}>
+      <LayoutsResult handleSubmit={handleSubmit(onSubmit)} />
+    </FormProvider>
+  );
 };

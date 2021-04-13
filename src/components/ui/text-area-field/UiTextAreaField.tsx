@@ -12,7 +12,7 @@ export const UiTextAreaField: React.FC<UiTextAreaFieldProps> = ({
   ...otherProps
 }) => {
 
-  const { formState: { errors } } = useFormContext()
+  const { formState: { errors } } = useFormContext();
   
   const filedError = errors[name]?.message;
 
