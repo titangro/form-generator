@@ -1,18 +1,20 @@
 import React from 'react';
+import { useFormContext } from 'react-hook-form';
+import { ConfigFormDataField } from '~/components/base/config/typings';
 import { UiButton } from '~/components/ui/button/UiButton';
 import { UiTextAreaField } from '~/components/ui/text-area-field/UiTextAreaField';
 import { LayoutsButtons } from '../buttons/LayoutsButtons';
 import styles from './LayoutsConfig.module.scss';
-console.log('🚀 ~ file: LayoutsConfig.tsx ~ line 6 ~ styles', styles);
 import { LayoutsConfigProps } from './typings';
 
 export const LayoutsConfig: React.FC<LayoutsConfigProps> = ({
   handleSubmit,
 }) => {
+
   return (
     <form className={styles.layoutsConfig} onSubmit={handleSubmit}>
       <UiTextAreaField
-        name="JSON-parser"
+        name={ConfigFormDataField.JSON}
         className={styles.layoutsConfig__jsonField}
         rows={20}
       />

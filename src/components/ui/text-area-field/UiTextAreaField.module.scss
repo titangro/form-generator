@@ -1,6 +1,10 @@
 .ui-text-area-field {
   width: 100%;
-  border: $base 1px solid;
-  resize: none;
-  padding: 8px;
+
+  &__textarea {
+    width: 100%;
+    border: $base 1px solid;
+    resize: none;
+    padding: 8px;
+  }
 }

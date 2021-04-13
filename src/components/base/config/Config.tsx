@@ -1,12 +1,37 @@
 import React from 'react';
-import { UiButton } from '~/components/ui/button/UiButton';
+import { useForm, FormProvider } from 'react-hook-form';
 import { LayoutsConfig } from '~/layouts/config/LayoutsConfig';
+import { ConfigFormData, ConfigFormDataField } from './typings';
+
+import { testData } from './mock';
+import { JSONConverter } from '~/utils/JSONConverter';
+
+
 
 export const Config = () => {
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  const formMethods = useForm({
+    defaultValues: {
+      [ConfigFormDataField.JSON]: JSONConverter.getJSONFromObject(testData)
+    }
+  });
+
+  const { handleSubmit, setError } = formMethods;
+
+  const onSubmit = (data: ConfigFormData) => {
+    const objectFromJSON = JSONConverter.getObjectFromJSON(data[ConfigFormDataField.JSON])
+    
+    if (objectFromJSON instanceof Error) {
+      setError(ConfigFormDataField.JSON, {
+        message: 'Error on parsing JSON to object. Check correcting of data at JSON string!' 
+      })
+    }
     console.log('SUBMITED CONFIG');
   };
 
-  return <LayoutsConfig handleSubmit={handleSubmit} />;
+  return (
+    <FormProvider {...formMethods}>
+      <LayoutsConfig handleSubmit={handleSubmit(onSubmit)} />
+    </FormProvider>
+  );
 };
+      
