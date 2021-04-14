@@ -16,10 +16,13 @@ export const Config = () => {
 		}
 	});
 
+
+
 	const { handleSubmit, setError } = formMethods;
 
 	const onSubmit = (data: ConfigFormData) => {
-		const objectFromJSON = JSONConverter.getObjectFromJSON(data[ConfigFormDataField.JSON]);
+		const fieldJSONValue = data[ConfigFormDataField.JSON];
+		const objectFromJSON = JSONConverter.getObjectFromJSON(fieldJSONValue);
     
 		if (objectFromJSON instanceof Error) {
 			setError(ConfigFormDataField.JSON, {

@@ -27,25 +27,6 @@ module.exports = (env) => {
 			new HtmlWebpackPlugin({
 				template: path.resolve(__dirname, 'dist/index.html'),
 			}),
-			new ESLintPlugin({
-				printWidth: 80,
-				singleQuote: true,
-				endOfLine: 'auto',
-				trailingComma: 'all',
-			}),
-
-			// module.exports = {
-			//   "plugins": ["prettier"],
-			//   "rules": {
-			//     'prettier/prettier': [
-			//       'error',
-			//       {
-			//         singleQuote: true,
-			//         endOfLine: 'auto',
-			//       },
-			//     ],
-			//   }
-			// }
 
 			// Add your plugins here
 			// Learn more obout plugins from https://webpack.js.org/configuration/plugins/
