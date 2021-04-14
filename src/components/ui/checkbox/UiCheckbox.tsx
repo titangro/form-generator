@@ -5,16 +5,16 @@ import { UiCheckboxProps } from './typings';
 import styles from './UiCheckbox.module.scss';
 
 export const UiCheckbox: React.FC<UiCheckboxProps> = ({
-  name,
-  className,
-  ...otherProps
+	name,
+	className,
+	...otherProps
 }) => {
-  return (
-    <input
-      type="checkbox"
-      name={name}
-      className={classNames(styles.uiCheckbox, className)}
-      {...otherProps}
-    />
-  );
+	return (
+		<input
+			type="checkbox"
+			name={name}
+			className={classNames(styles.uiCheckbox, className)}
+			{...otherProps}
+		/>
+	);
 };

@@ -7,27 +7,27 @@ import { UiTextAreaFieldProps } from './typings';
 import styles from './UiTextAreaField.module.scss';
 
 export const UiTextAreaField: React.FC<UiTextAreaFieldProps> = ({
-  name,
-  className,
-  ...otherProps
+	name,
+	className,
+	...otherProps
 }) => {
 
-  const { formState: { errors } } = useFormContext();
+	const { formState: { errors } } = useFormContext();
   
-  const filedError = errors[name]?.message;
+	const filedError = errors[name]?.message;
 
-  const { field: { ref, ...fieldProps} } = useController({ name })
+	const { field: { ref, ...fieldProps} } = useController({ name });
 
-  return (
-    <div className={classNames(styles.uiTextAreaField, className)}>
-      <textarea
-        {...fieldProps}
-        ref={ref}
-        className={classNames(styles.uiTextAreaField__textarea)}
-        rows={5}
-        {...otherProps}
-      />
-      {filedError && <LayoutsError>{filedError}</LayoutsError>}
-    </div>
-  );
+	return (
+		<div className={classNames(styles.uiTextAreaField, className)}>
+			<textarea
+				{...fieldProps}
+				ref={ref}
+				className={classNames(styles.uiTextAreaField__textarea)}
+				rows={5}
+				{...otherProps}
+			/>
+			{filedError && <LayoutsError>{filedError}</LayoutsError>}
+		</div>
+	);
 };

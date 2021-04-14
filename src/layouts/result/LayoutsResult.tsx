@@ -14,50 +14,50 @@ import styles from './LayoutsResult.module.scss';
 import { LayoutsResultProps } from './typings';
 
 export const LayoutsResult: React.FC<LayoutsResultProps> = ({
-  // children
-  handleSubmit,
+	// children
+	handleSubmit,
 }) => {
-  return (
-    <form className={styles.layoutsResult} onSubmit={handleSubmit}>
-      {/* children */}
-      <LayoutsFieldRow label="Count">
-        <UiNumberField name="count" />
-      </LayoutsFieldRow>
-      <LayoutsFieldRow label="Is Editable">
-        <UiCheckbox name="Is Editable" />
-      </LayoutsFieldRow>
-      <LayoutsFieldRow label="Caption">
-        <UiTextField name="Caption" />
-      </LayoutsFieldRow>
-      <LayoutsFieldRow label="Description">
-        <UiTextAreaField name="Description" />
-      </LayoutsFieldRow>
-      <LayoutsFieldRow label="Date">
-        <UiDateField name="Date" />
-      </LayoutsFieldRow>
-      <LayoutsFieldRow label="Radio">
-        <UiRadioButtons name="Radio" values={['male', 'female']} />
-      </LayoutsFieldRow>
-      {/* end children */}
+	return (
+		<form className={styles.layoutsResult} onSubmit={handleSubmit}>
+			{/* children */}
+			<LayoutsFieldRow label="Count">
+				<UiNumberField name="count" />
+			</LayoutsFieldRow>
+			<LayoutsFieldRow label="Is Editable">
+				<UiCheckbox name="Is Editable" />
+			</LayoutsFieldRow>
+			<LayoutsFieldRow label="Caption">
+				<UiTextField name="Caption" />
+			</LayoutsFieldRow>
+			<LayoutsFieldRow label="Description">
+				<UiTextAreaField name="Description" />
+			</LayoutsFieldRow>
+			<LayoutsFieldRow label="Date">
+				<UiDateField name="Date" />
+			</LayoutsFieldRow>
+			<LayoutsFieldRow label="Radio">
+				<UiRadioButtons name="Radio" values={['male', 'female']} />
+			</LayoutsFieldRow>
+			{/* end children */}
 
-      <LayoutsButtons>
-        {/* buttons */}
-        <UiButton
-          type="button"
-          onClick={handleSubmit}
-          className={styles.layoutsResult__button}
-        >
+			<LayoutsButtons>
+				{/* buttons */}
+				<UiButton
+					type="button"
+					onClick={handleSubmit}
+					className={styles.layoutsResult__button}
+				>
           Cancel
-        </UiButton>
-        <UiButton
-          type="button"
-          onClick={handleSubmit}
-          className={styles.layoutsResult__button}
-        >
+				</UiButton>
+				<UiButton
+					type="button"
+					onClick={handleSubmit}
+					className={styles.layoutsResult__button}
+				>
           Save
-        </UiButton>
-        {/* end buttons */}
-      </LayoutsButtons>
-    </form>
-  );
+				</UiButton>
+				{/* end buttons */}
+			</LayoutsButtons>
+		</form>
+	);
 };
