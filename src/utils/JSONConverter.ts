@@ -1,23 +1,4 @@
-enum FormTypes {
-  Number = 'number',
-  Text = 'text',
-  Checkbox = 'checkbox',
-  Date = 'date',
-  TextArea = 'textarea',
-  RadioButtons = 'radio'
-}
-
-interface ConfigItem {
-  label: string;
-  type: FormTypes
-  values?: string[]
-}
-
-export interface ConfigFields {
-  label: string;
-  items: ConfigItem[];
-  buttons: string[]
-}
+import { GeneratorConfigFields } from "~/types/generatorConfig"
 
 export class JSONConverter {
   static getJSONFromObject(obejct: Record<string, unknown>) {
@@ -27,7 +8,7 @@ export class JSONConverter {
     .replace(/[,]/g, ',\n    ') 
   }
 
-  static getObjectFromJSON (str: string): ConfigFields | Error {
+  static getObjectFromJSON (str: string): GeneratorConfigFields | Error {
     try {
       return JSON.parse(str)
     } catch(error) {

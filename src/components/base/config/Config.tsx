@@ -3,15 +3,15 @@ import { useForm, FormProvider } from 'react-hook-form';
 import { LayoutsConfig } from '~/layouts/config/LayoutsConfig';
 import { ConfigFormData, ConfigFormDataField } from './typings';
 
-import { testData } from './mock';
 import { JSONConverter } from '~/utils/JSONConverter';
-
-
 
 export const Config = () => {
   const formMethods = useForm({
     defaultValues: {
-      [ConfigFormDataField.JSON]: JSONConverter.getJSONFromObject(testData)
+      [ConfigFormDataField.JSON]: JSONConverter.getJSONFromObject(
+        // testData
+        {}
+      )
     }
   });
 
