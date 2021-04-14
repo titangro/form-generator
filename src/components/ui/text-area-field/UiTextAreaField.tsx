@@ -11,12 +11,15 @@ export const UiTextAreaField: React.FC<UiTextAreaFieldProps> = ({
 	className,
 	...otherProps
 }) => {
+	const {
+		formState: { errors },
+	} = useFormContext();
 
-	const { formState: { errors } } = useFormContext();
-  
 	const filedError = errors[name]?.message;
 
-	const { field: { ref, ...fieldProps} } = useController({ name });
+	const {
+		field: { ref, ...fieldProps },
+	} = useController({ name });
 
 	return (
 		<div className={classNames(styles.uiTextAreaField, className)}>

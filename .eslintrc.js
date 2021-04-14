@@ -28,9 +28,11 @@ module.exports = {
 				singleQuote: true,
 				trailingComma: 'all',
 				useTabs: true,
+				proseWrap: 'always',
+				endOfLine: 'crlf',
+				bracketSpacing: true,
 			},
 		],
-		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 		'max-len': [
@@ -49,5 +51,7 @@ module.exports = {
 		],
 		'react/prop-types': ['off'],
 		'@typescript-eslint/explicit-module-boundary-types': ['off'],
+		'@typescript-eslint/no-empty-function': ['off'],
+		'react/display-name': ['off'],
 	},
 };

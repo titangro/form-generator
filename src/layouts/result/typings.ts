@@ -1,3 +1,7 @@
 export interface LayoutsResultProps {
-  handleSubmit: (event: React.FormEvent) => void;
+	message: string;
+	clickSaveButton: (event: React.FormEvent) => void;
+	clickOkButton: () => void;
+	clickCancelButton: () => void;
+	commonHandleClick: () => void;
 }

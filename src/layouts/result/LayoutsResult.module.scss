@@ -7,4 +7,9 @@
     border: $base solid 1px;
     border-radius: 5px;
   }
+
+  &__message {
+    padding: 24px;
+    color: $primaryDark;
+  }
 }
