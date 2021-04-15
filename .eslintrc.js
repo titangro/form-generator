@@ -28,13 +28,9 @@ module.exports = {
 				singleQuote: true,
 				trailingComma: 'all',
 				useTabs: true,
-<<<<<<< HEAD
-				tabWidth: 2,
-=======
 				proseWrap: 'always',
-				endOfLine: 'crlf',
+				endOfLine: 'auto',
 				bracketSpacing: true,
->>>>>>> 474d94069185b7d9ec6dfb120c9329696c97ecff
 			},
 		],
 		quotes: ['error', 'single'],
