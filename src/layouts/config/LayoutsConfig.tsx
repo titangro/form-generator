@@ -9,8 +9,8 @@ import { LayoutsConfigProps } from './typings';
 
 export const LayoutsConfig: React.FC<LayoutsConfigProps> = ({
 	handleSubmit,
+	isSuccess,
 }) => {
-
 	return (
 		<form className={styles.layoutsConfig} onSubmit={handleSubmit}>
 			<UiTextAreaField
@@ -18,13 +18,18 @@ export const LayoutsConfig: React.FC<LayoutsConfigProps> = ({
 				className={styles.layoutsConfig__jsonField}
 				rows={20}
 			/>
+			{isSuccess && (
+				<div className={styles.layoutsConfig__success}>
+					Saving was successful!
+				</div>
+			)}
 			<LayoutsButtons>
 				<UiButton
 					type="submit"
 					onSubmit={handleSubmit}
 					className={styles.layoutsConfig__button}
 				>
-          Apply
+					Apply
 				</UiButton>
 			</LayoutsButtons>
 		</form>

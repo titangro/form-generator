@@ -3,13 +3,14 @@ import { LayoutsMain } from '~/layouts/main/LayoutsMain';
 import { Tabs } from '~/components/core/tabs/Tabs';
 import { Config } from './components/base/config/Config';
 import { Result } from './components/base/result/Result';
+import { withContexts } from './hocs/withContexts';
 
 const tabComponents = {
 	Config: <Config />,
 	Result: <Result />,
 };
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
 	const [activeName, setActiveName] = useState(Object.keys(tabComponents)[0]);
 
 	const handleActiveName = (name: string) => {
@@ -26,3 +27,5 @@ export const App: React.FC = () => {
 		</LayoutsMain>
 	);
 };
+
+export default withContexts(App);

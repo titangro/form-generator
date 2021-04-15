@@ -28,10 +28,15 @@ module.exports = {
 				singleQuote: true,
 				trailingComma: 'all',
 				useTabs: true,
+<<<<<<< HEAD
 				tabWidth: 2,
+=======
+				proseWrap: 'always',
+				endOfLine: 'crlf',
+				bracketSpacing: true,
+>>>>>>> 474d94069185b7d9ec6dfb120c9329696c97ecff
 			},
 		],
-		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
 		'max-len': [
@@ -50,5 +55,7 @@ module.exports = {
 		],
 		'react/prop-types': ['off'],
 		'@typescript-eslint/explicit-module-boundary-types': ['off'],
+		'@typescript-eslint/no-empty-function': ['off'],
+		'react/display-name': ['off'],
 	},
 };
