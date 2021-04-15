@@ -1,0 +1,15 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    border: $base 1px solid;
+    min-width: 800px;
+    padding: 24px;
+  }
+}

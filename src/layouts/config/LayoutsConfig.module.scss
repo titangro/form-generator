@@ -1,0 +1,17 @@
+.layouts-config {
+  width: 100%;
+
+  &__json-field {
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    border: $base solid 1px;
+    border-radius: 5px;
+  }
+
+  &__success {
+    color: $green;
+    position: absolute;
+  }
+}

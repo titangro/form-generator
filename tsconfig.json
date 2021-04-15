@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "module": "es6",
@@ -7,9 +8,12 @@
     "allowJs": true,
     "outDir": "build",
     "rootDir": "src",
-    "baseUrl": "src",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"],
+    }
   },
-  "files": ["src/index.ts"],
-  "include": ["src/**/*"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

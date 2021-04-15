@@ -1,33 +1,57 @@
 {
-  "name": "my-webpack-project",
+  "name": "form-generator",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production",
     "watch": "webpack --watch",
-    "serve": "webpack serve",
-    "start": "webpack serve --open"
+    "serve": "webpack serve --port 3000",
+    "start": "webpack serve --open --port 3000"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.0.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-stage-3": "^7.8.3",
+    "@babel/preset-typescript": "^7.13.0",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "@webpack-cli/generators": "^2.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-upgrade": "^1.0.1",
     "css-loader": "^5.2.0",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-webpack-plugin": "^2.5.3",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.2.1",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
+    "sonarjs": "^1.0.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.1.0",
+    "typed-scss-modules": "^4.1.1",
     "typescript": "^4.2.4",
+    "typescript-plugin-css-modules": "^3.2.0",
     "webpack": "^5.31.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
-  "description": "My webpack project"
+  "description": "form-generator from JSON",
+  "main": "src/index.tsx",
+  "repository": "git@github.com:titangro/form-generator.git",
+  "author": "Roman Grankov",
+  "license": "MIT"
 }
