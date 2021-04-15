@@ -14,6 +14,7 @@ module.exports = (env) => {
 		entry: source,
 		output: {
 			path: path.resolve(__dirname, 'build'),
+			publickPath: '/form-generator'
 		},
 		context: source,
 		devServer: {

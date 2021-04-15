@@ -22,14 +22,14 @@ module.exports = {
 		'no-plusplus': ['off'],
 		indent: ['error', 'tab'],
 		'prettier/prettier': [
-			'error',
+			'warn',
 			{
 				printWidth: 80,
 				singleQuote: true,
 				trailingComma: 'all',
 				useTabs: true,
 				proseWrap: 'always',
-				endOfLine: 'crlf',
+				endOfLine: 'auto',
 				bracketSpacing: true,
 			},
 		],
