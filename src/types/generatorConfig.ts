@@ -15,7 +15,6 @@ export enum GeneratorButtonTypes {
 }
 
 export interface GeneratorConfigItem {
-	id: string;
 	label?: string;
 	type?: GeneratorFormTypes;
 	values?: string[];

@@ -13,6 +13,7 @@ import {
 	GeneratorButtonTypes,
 	GeneratorFormTypes,
 } from '~/types/generatorConfig';
+import { createGuid } from '~/utils/createGuid';
 import { LayoutsButtons } from '../buttons/LayoutsButtons';
 import { LayoutsFieldRow } from '../field-row/LayoutsFieldRow';
 
@@ -63,7 +64,7 @@ export const LayoutsResult: React.FC<LayoutsResultProps> = ({
 			{items &&
 				items.map((field) => {
 					return (
-						<LayoutsFieldRow key={field.id} label={field.label}>
+						<LayoutsFieldRow key={createGuid()} label={field.label}>
 							{getFieldByType(field)}
 						</LayoutsFieldRow>
 					);

@@ -5,38 +5,31 @@ import {
 	GeneratorConfigItem,
 	GeneratorFormTypes,
 } from '~/types/generatorConfig';
-import { createGuid } from '~/utils/createGuid';
 
 export const defaultGeneratorConfig: GeneratorConfigFields = {
 	label: 'testForm',
 	items: [
 		{
-			id: '1',
 			label: 'Count',
 			type: GeneratorFormTypes.Number,
 		},
 		{
-			id: '2',
 			label: 'Is Editable',
 			type: GeneratorFormTypes.Checkbox,
 		},
 		{
-			id: '3',
 			label: 'Caption',
 			type: GeneratorFormTypes.Text,
 		},
 		{
-			id: '4',
 			label: 'Description',
 			type: GeneratorFormTypes.TextArea,
 		},
 		{
-			id: '5',
 			label: 'Date',
 			type: GeneratorFormTypes.Date,
 		},
 		{
-			id: '6',
 			label: 'Sex',
 			type: GeneratorFormTypes.RadioButtons,
 			values: ['male', 'female'],
@@ -80,7 +73,6 @@ export const ConfigState: React.FC = ({ children }) => {
 			return [
 				...prev,
 				{
-					id: createGuid(),
 					label: currentLabel,
 					type: Object.values(GeneratorFormTypes).includes(field.type)
 						? field.type
