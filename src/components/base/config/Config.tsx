@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm, FormProvider } from 'react-hook-form';
 import { LayoutsConfig } from '~/layouts/config/LayoutsConfig';
@@ -11,8 +11,6 @@ import { screensPaths } from '~/screens';
 
 export const Config = () => {
 	const history = useHistory();
-
-	const [isSuccess, setIsSuccess] = useState(false);
 
 	const { generatorConfig, handleGeneratorConfig } = useContext(ConfigContext);
 
@@ -52,10 +50,7 @@ export const Config = () => {
 
 	return (
 		<FormProvider {...formMethods}>
-			<LayoutsConfig
-				handleSubmit={handleSubmit(onSubmit)}
-				isSuccess={isSuccess}
-			/>
+			<LayoutsConfig handleSubmit={handleSubmit(onSubmit)} />
 		</FormProvider>
 	);
 };
