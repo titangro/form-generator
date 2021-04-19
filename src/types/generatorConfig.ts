@@ -15,13 +15,14 @@ export enum GeneratorButtonTypes {
 }
 
 export interface GeneratorConfigItem {
-	label: string;
-	type: GeneratorFormTypes;
+	id: string;
+	label?: string;
+	type?: GeneratorFormTypes;
 	values?: string[];
 }
 
 export interface GeneratorConfigFields {
-	label: string;
-	items: GeneratorConfigItem[];
-	buttons: GeneratorButtonTypes[];
+	label?: string;
+	items?: GeneratorConfigItem[];
+	buttons?: GeneratorButtonTypes[];
 }

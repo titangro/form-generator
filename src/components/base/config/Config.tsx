@@ -10,7 +10,7 @@ import { GeneratorConfigFields } from '~/types/generatorConfig';
 export const Config = () => {
 	const [isSuccess, setIsSuccess] = useState(false);
 
-	const { generatorConfig, setGeneratorConfig } = useContext(ConfigContext);
+	const { generatorConfig, handleGeneratorConfig } = useContext(ConfigContext);
 
 	const formMethods = useForm({
 		defaultValues: {
@@ -23,7 +23,7 @@ export const Config = () => {
 	const { handleSubmit, setError } = formMethods;
 
 	const saveConfigObject = (configObject: GeneratorConfigFields) => {
-		setGeneratorConfig(configObject);
+		handleGeneratorConfig(configObject);
 	};
 
 	const handleSuccessful = () => {

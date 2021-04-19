@@ -63,7 +63,7 @@ export const LayoutsResult: React.FC<LayoutsResultProps> = ({
 			{items &&
 				items.map((field) => {
 					return (
-						<LayoutsFieldRow key={field.label} label={field.label}>
+						<LayoutsFieldRow key={field.id} label={field.label}>
 							{getFieldByType(field)}
 						</LayoutsFieldRow>
 					);
