@@ -8,7 +8,7 @@ export const TabsHeadItem: React.FC<TabsHeadItemProps> = (props) => {
 	const { name, isActive, handleActiveName } = props;
 
 	const handleClick = () => {
-		handleActiveName(name);
+		handleActiveName(name === 'config' ? '' : name);
 	};
 
 	return (

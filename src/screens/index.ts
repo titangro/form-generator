@@ -5,5 +5,5 @@ export enum Screens {
 
 export const screensPaths = {
 	[Screens.Result]: '/result',
-	[Screens.Config]: '/config',
+	[Screens.Config]: '/',
 };
