@@ -12,7 +12,7 @@ import { LayoutsMain } from '~/layouts/main/LayoutsMain';
 const App: React.FC = () => {
 	return (
 		<LayoutsMain>
-			<Router>
+			<Router basename="/form-generator">
 				<div>
 					<Switch>
 						<Route path={screensPaths.config} component={ScreensConfig} />
