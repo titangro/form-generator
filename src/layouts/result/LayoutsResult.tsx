@@ -73,10 +73,10 @@ export const LayoutsResult: React.FC<LayoutsResultProps> = ({
 			<pre className={styles.layoutsResult__message}>{message}</pre>
 
 			<LayoutsButtons>
-				{buttons.map((buttonType) => {
+				{buttons.map((buttonType, index) => {
 					return (
 						<UiButton
-							key={buttonType}
+							key={`${buttonType}_${index}`}
 							type={
 								buttonType === GeneratorButtonTypes.Save ? 'submit' : 'button'
 							}

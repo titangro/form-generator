@@ -29,7 +29,9 @@ export const Tabs: React.FC<TabsProps> = () => {
 	const sectionPath = getSection(location.pathname) || 'config';
 
 	const handleActiveName = (name: string) => {
-		history.push(`/${name}`);
+		history.push({
+			pathname: `/${name}`,
+		});
 	};
 
 	return (

@@ -16,8 +16,11 @@ export const UiRadioButtons: React.FC<UiRadioButtonsProps> = ({
 	return (
 		<div className={classNames(styles.uiRadioButtons, className)}>
 			{values &&
-				values.map((fieldValue) => (
-					<label key={fieldValue} className={styles.uiRadioButtons__label}>
+				values.map((fieldValue, index) => (
+					<label
+						key={`${fieldValue}_${index}`}
+						className={styles.uiRadioButtons__label}
+					>
 						<input
 							type="radio"
 							{...register(name)}

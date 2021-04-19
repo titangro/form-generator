@@ -16,8 +16,8 @@ export const UiButton: React.FC<UiButtonProps> = ({
 			className={classNames(styles.button, className, {
 				[styles.button_active]: isActive,
 			})}
-			onClick={onClick}
 			type="button"
+			onClick={onClick}
 			{...otherProps}
 		>
 			{children}

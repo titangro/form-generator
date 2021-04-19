@@ -29,7 +29,9 @@ export const Config = () => {
 	};
 
 	const handleSuccessful = () => {
-		history.push(screensPaths.result);
+		history.push({
+			pathname: screensPaths.result,
+		});
 	};
 
 	const onSubmit = (data: ConfigFormData) => {
