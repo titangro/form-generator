@@ -2,6 +2,7 @@
 // Generated using webpack-cli http://github.com/webpack-cli
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = (env) => {
 	const { PORT } = env;
@@ -24,7 +25,7 @@ module.exports = (env) => {
 
 		plugins: [
 			new HtmlWebpackPlugin({
-				template: path.resolve(__dirname, 'build/index.html'),
+				template: path.resolve(__dirname, 'dist/index.html'),
 			}),
 
 			// Add your plugins here
