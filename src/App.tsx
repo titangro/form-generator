@@ -1,30 +1,28 @@
-import React, { useState } from 'react';
-import { LayoutsMain } from '~/layouts/main/LayoutsMain';
-import { Tabs } from '~/components/core/tabs/Tabs';
-import { Config } from './components/base/config/Config';
-import { Result } from './components/base/result/Result';
+import React from 'react';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	Redirect,
+} from 'react-router-dom';
+
 import { withContexts } from './hocs/withContexts';
 
-const tabComponents = {
-	Config: <Config />,
-	Result: <Result />,
-};
+import { screensPaths } from './screens';
+import { ScreensConfig } from './screens/config/config';
+import { ScreensResult } from './screens/result/result';
 
 const App: React.FC = () => {
-	const [activeName, setActiveName] = useState(Object.keys(tabComponents)[0]);
-
-	const handleActiveName = (name: string) => {
-		setActiveName((prev) => (prev !== name ? name : prev));
-	};
-
 	return (
-		<LayoutsMain>
-			<Tabs
-				components={tabComponents}
-				handleActiveName={handleActiveName}
-				activeName={activeName}
-			/>
-		</LayoutsMain>
+		<Router>
+			<Switch>
+				<Route exact path="/">
+					<Redirect to={screensPaths.config} />
+				</Route>
+				<Route exact path={screensPaths.config} component={ScreensConfig} />
+				<Route exact path={screensPaths.result} component={ScreensResult} />
+			</Switch>
+		</Router>
 	);
 };
 
