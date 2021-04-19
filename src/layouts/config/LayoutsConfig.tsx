@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useFormContext } from 'react-hook-form';
 import { ConfigFormDataField } from '~/components/base/config/typings';
 import { UiButton } from '~/components/ui/button/UiButton';
 import { UiTextAreaField } from '~/components/ui/text-area-field/UiTextAreaField';
